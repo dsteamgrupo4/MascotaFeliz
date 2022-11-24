@@ -1,0 +1,31 @@
+<body class="row nomargin color2">
+    <header>
+        <br>
+        <h4>Módulo de Asesor</h4>
+        <h5>Lista de Mascotas</h5>
+    </header>
+    <div class="container pt-60">
+        <div class="row nomargin">
+            <table class="table responsive col s12">
+                <thead class="color1 letra1">
+                    <tr>
+                        <th class="center">Foto</th>
+                        <th class="center">Nombre</th>
+                        <th class="center">Especie</th>
+                        <th class="center">Plan</th>
+                        <th class="center">Propietario</th>
+                        <th class="center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of listadoRegistro">
+                        <td class="center"><img src="{{p.foto}}" class="imagenMascota"></td>
+                        <td class="center">{{p.nombre}}</td>
+                        <td class="center">{{p.especie}}</td>
+                        <td class="center">{{p.planId}}</td>
+                        <td class="center" *ngFor="let item of obtenerCliente(p)">{{item.nombre}} {{item.apellido}}</td>
+                        <td class="center">{{p.estado}}</td>
+                        <td class="center"><a routerLink="/asesor/editarMascotas/{{p.id}}" class="btn">Cambiar Estado</a></td>
+                    </tr>
+                </tbody>
+            </table>

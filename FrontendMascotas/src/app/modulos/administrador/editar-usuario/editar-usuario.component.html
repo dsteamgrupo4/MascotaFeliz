@@ -1,0 +1,62 @@
+<body class="row nomargin color2">
+  <header>
+    <br>
+    <h4>Módulo de Administrador</h4>
+    <h5>Modificar Usuario</h5>
+  </header>
+  <div class="container pt-60">
+    <div class="row nomargin">
+      <div class="col s6 color1">
+        <form [formGroup]="fgValidator" (ngSubmit)="EditarUsuario()" method="POST">
+          <input type="hidden" formControlName="id">
+          <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="nombre" type="text" name="nombre" class="validate letra1">
+              <label for="nombre" class="active">Nombres</label>
+            </div>
+            <div class="input-field col s6">
+              <input formControlName="apellido" type="text" name="apellido" class="validate letra1">
+              <label for="apellido" class="active">Apellidos</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="cedula" type="text" name="cedula" class="validate letra1">
+              <label for="cedula" class="active">Cédula</label>
+            </div>
+            <div class="input-field col s6">
+              <input formControlName="telefono" type="text" name="telefono" class="validate letra1">
+              <label for="telefono" class="active">Teléfono</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input formControlName="correo" type="text" name="correo" class="validate letra1">
+              <label for="correo" class="active">Correo Electrónico</label>
+            </div>
+            <div class="input-field col s6">
+              <select formControlName="rol" type="text" name="rol" class="browser-default" aria-label="rol">
+                <option value="" disabled selected></option>
+                <option value="Administrador">Administrador</option>
+                <option value="Asesor">Asesor</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 mt-25 center">
+              <button [disabled]="!fgValidator.valid" class="btn waves-effect waves-light" type="submit"
+                name="action">Editar Usuario
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col s6 color1">
+        <div class="center">
+          <img class="logo2 responsive-img" src="../assets/Img/Perro1.png" alt="Logo Mascota Feliz">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

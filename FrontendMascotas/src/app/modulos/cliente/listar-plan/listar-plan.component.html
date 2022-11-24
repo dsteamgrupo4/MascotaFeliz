@@ -1,0 +1,23 @@
+<body class="row nomargin color2">
+    <header>
+        <br>
+        <h5>Planes disponibles</h5>
+    </header>
+    <div class="container pt-60">
+        <div class="row nomargin">
+<table class="table responsive col s12">
+    <thead class="color1 letra1">
+        <tr>
+            <th class="center">Nombre</th>
+            <th class="center">Descripcion</th>
+            <th class="center">Valor Mes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td class="center">{{p.nombre}}</td>
+            <td class="center">{{p.descripcion}}</td>
+            <td class="center">{{p.precio}}</td>
+        </tr>
+    </tbody>
+</table>

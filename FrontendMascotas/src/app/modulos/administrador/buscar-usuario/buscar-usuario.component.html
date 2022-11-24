@@ -1,0 +1,41 @@
+<body class="row nomargin color2">
+    <header>
+        <br>
+        <h4>Módulo de Administrador</h4>
+        <h5>Listado de Usuarios</h5>
+    </header>
+    <div class="container pt-60">
+        <div class="row nomargin">
+            <table class="table responsive col s12">
+                <thead class="color1 letra1">
+                    <tr>
+                        <th class="center">Nombres</th>
+                        <th class="center">Apellidos</th>
+                        <th class="center">Cédula</th>
+                        <th class="center">Teléfono</th>
+                        <th class="center">Correo Electrónico</th>
+                        <th class="center">Rol</th>
+                        <th class="center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of listadoRegistro">
+                        <td class="center">{{p.nombre}}</td>
+                        <td class="center">{{p.apellido}}</td>
+                        <td class="center">{{p.cedula}}</td>
+                        <td class="center">{{p.telefono}}</td>
+                        <td class="center">{{p.correo}}</td>
+                        <td class="center">{{p.rol}}</td>
+                        <td class="center2"><a routerLink="/administrador/editarUsuario/{{p.id}}" class="btn">Editar</a>
+                        <button class="btn" (click)="eliminarUsuario(p.id)">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row nomargin color1">
+            <div class="col s12 mt-25 center">
+                <a routerLink="/administrador/crearUsuario" class="btn waves-effect waves-light">Nuevo Usuario</a>
+            </div>
+        </div>
+    </div>
+</body>

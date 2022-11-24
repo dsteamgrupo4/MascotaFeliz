@@ -1,0 +1,78 @@
+<body class="row nomargin color2">
+    <header>
+        <br>
+        <h4>Módulo de Asesor</h4>
+        <h5>Aceptar/Rechazar Mascota</h5>
+    </header>
+    <div class="container pt-60">
+        <div class="row nomargin">
+            <div class="col s6 color1">
+                <form [formGroup]="fgValidator" (ngSubmit)="EditarMascota()" method="POST">
+                    <input type="hidden" formControlName="id">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input formControlName="nombre" type="text" name="nombre" class="validate letra1">
+                            <label for="nombre" class="active">Nombre</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select formControlName="especie" type="text" name="especie" class="browser-default"
+                                aria-label="especie">
+                                <option value="" disabled selected>Especie</option>
+                                <option value="Ave">Aves</option>
+                                <option value="Gato">Gatos</option>
+                                <option value="Perro">Perros</option>
+                                <option value="Conejo">Conejos</option>
+                                <option value="Serpiente">Serpientes</option>
+                                <option value="Tortuga">Tortugas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input formControlName="foto" type="text" name="foto" class="validate letra1">
+                            <label for="foto" class="active">Url Foto</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select formControlName="planId" type="text" name="planId" class="browser-default"
+                                aria-label="planId">
+                                <option value="" disabled selected>Plan</option>
+                                <option value="Bronce">Bronce</option>
+                                <option value="Plata">Plata</option>
+                                <option value="Oro">Oro</option>
+                                <option value="Diamante">Diamante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s9">
+                            <textarea formControlName="comentario" type="text" name="comentario"
+                                class="materialize-textarea"></textarea>
+                            <label for="comentario" class="active">Comentario</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <select formControlName="estado" type="text" name="estado" class="browser-default"
+                                aria-label="estado">
+                                <option value="" disabled selected>Estado</option>
+                                <option value="Aceptado">Aceptado</option>
+                                <option value="Rechazado">Rechazado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 mt-25 center">
+                            <button [disabled]="!fgValidator.valid" class="btn waves-effect waves-light" type="submit"
+                                name="action">Editar
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col s6 color1">
+                <div class="center">
+                    <img class="logo2 responsive-img" src="../assets/Img/Perro1.png" alt="Logo Mascota Feliz">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,82 @@
+.imagenMascota{
+    width: 100px;
+}
+
+h5 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid #f2f2f2;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.col.s6 {
+    padding: 10px;
+}
+
+.col.s12 {
+    padding: 5px;
+}
+
+.center {
+    align-content: center;
+    justify-content: center;
+}
+
+.center2 {
+    display: flex;
+    align-content: center;
+    justify-content:space-around;
+}
+
+.mt-25 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.nomargin {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.logo2 {
+    display: flex;
+    height: 378px
+}
+
+.color1 {
+    background-color: rgb(0, 51, 51);
+}
+
+.color2 {
+    background-color: #A8A8A8;
+}
+
+.color3 {
+    background-color: rgb(128, 16, 6);
+}
+
+.color4 {
+    background-color: rgb(204, 137, 20);
+}
+
+.white {
+    background-color:white;
+}
+
+.letra1 {
+    color:white;
+}

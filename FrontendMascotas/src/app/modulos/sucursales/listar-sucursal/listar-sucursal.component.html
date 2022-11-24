@@ -1,0 +1,38 @@
+<body class="row nomargin color2">
+    <header>
+        <br>
+        <h4>Módulo de Administrador</h4>
+        <h5>Sucursales</h5>
+    </header>
+    <div class="container pt-60">
+        <div class="row nomargin">
+            <table class="table responsive col s12">
+                <thead class="color1 letra1">
+                    <tr>
+                        <th class="center">Departamento</th>
+                        <th class="center">Ciudad</th>
+                        <th class="center">Dirección</th>
+                        <th class="center">Teléfono</th>
+                        <th class="center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let s of listadoRegistro">
+                        <td class="center">{{s.departamento}}</td>
+                        <td class="center">{{s.ciudad}}</td>
+                        <td class="center">{{s.direccion}}</td>
+                        <td class="center">{{s.telefono}}</td>
+                        <td class="center2"><a routerLink="/sucursales/editarSucursal/{{s.id}}" class="btn">Editar</a>
+                            <button class="btn" (click)="eliminarSucursal(s.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row nomargin color1">
+            <div class="col s12 mt-25 center">
+                <a routerLink="/sucursales/crearSucursal" class="btn">Nueva Sucursal</a>
+            </div>
+        </div>
+    </div>
+</body>

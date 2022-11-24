@@ -1,0 +1,41 @@
+<body class="row nomargin color2">
+    <header>
+        <br>
+        <h4>Módulo de Cliente</h4>
+        <h5>Mis Mascotas</h5>
+    </header>
+    <div class="container pt-60">
+        <div class="row nomargin">
+            <table class="table responsive col s12">
+                <thead class="color1 letra1">
+                    <tr>
+                        <th class="center">Foto</th>
+                        <th class="center">Nombre</th>
+                        <th class="center">Especie</th>
+                        <th class="center">Plan</th>
+                        <th class="center">Estado</th>
+                        <th class="center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let m of listadoRegistro">
+                        <td class="center"><img src="{{m.foto}}" class="fotoMascota"></td>
+                        <td class="center">{{m.nombre}}</td>
+                        <td class="center">{{m.especie}}</td>
+                        <td class="center">{{m.planId}}</td>
+                        <td class="center">{{m.estado}}</td>
+                        <td class="center2"><a routerLink="/cliente/editarMascota/{{m.id}}" class="btn">Editar</a>
+                            <button class="btn" (click)="eliminarMascota(m.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row nomargin color1">
+            <div class="col s12 mt-25 center">
+                <a routerLink="/cliente/registrarMascota" class="btn waves-effect waves-light">Agregar Mascota</a>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,31 @@
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="alinearV">
+        <div class="alinearI">
+            <img class="logo2 responsive-img" src="../assets/Img/Logo2.png" alt="Logo Mascota Feliz">
+        </div>
+        <div class="marca alinearD">Mascota Feliz</div>
+    </div>
+    <!-- NAVIGATION MENU -->
+    <div class="menu">
+        <ul class="right hide-on-med-and-down">
+
+            <li><a href="/">Home</a></li>
+            <li *ngIf="!seInicioSesion "><a routerLink="/prospecto/crearProspecto">Contactenos</a></li>            
+            <li *ngIf="!seInicioSesion "><a routerLink="/cliente/listarSucursal">Sucursales</a></li>
+            <li *ngIf="!seInicioSesion "><a routerLink="/cliente/listarPlan">Planes</a></li>
+            <li *ngIf="!seInicioSesion "><a routerLink="/cliente/listarProductos">Productos</a></li>
+            <li *ngIf="seInicioSesion && isValido('Administrador')"><a routerLink="/sucursales/listarSucursal">Sucursales</a></li>
+            <li *ngIf="seInicioSesion && isValido('Administrador')"><a routerLink="/administrador/listarPlan">planes</a></li>
+            <li *ngIf="seInicioSesion && isValido('Cliente')"><a routerLink="/cliente/listarMascota">Mascota cliente</a></li>
+            <li *ngIf="seInicioSesion && isValido('Asesor')"><a routerLink="/asesor/listaMascotas">Mascota asesor</a></li>
+            <li *ngIf="seInicioSesion && isValido('Asesor')"><a routerLink="/asesor/listarSolicitudes">Prospecto</a></li>
+            <li *ngIf="!seInicioSesion "><a routerLink="/seguridad/registroCliente">Registrarse</a></li>
+            <li *ngIf="seInicioSesion && isValido('Administrador')"><a routerLink="/administrador/crearUsuario">Registrar Usuario</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/login">Iniciar Sesion</a></li>
+            <li *ngIf="seInicioSesion && isValido('Administrador')"><a routerLink="/administrador/listarProducto">Producto</a></li>
+            <li *ngIf="seInicioSesion && isValido('Administrador')"><a routerLink="/administrador/listarUsuario">Usuarios</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesion</a></li>
+        </ul>
+    </div>
+</nav>

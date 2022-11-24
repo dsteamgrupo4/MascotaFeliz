@@ -1,0 +1,28 @@
+<div class="body">
+  <div class="container">
+    <div class="backbox">
+      <div class="loginMsg">
+        <div class="textcontent">
+          <p class="title">No tienes una cuenta?</p>
+          <p>Registrate y crea tu cuenta.</p>
+          <a routerLink="/seguridad/registroCliente/" class="btn">Registrarse</a>
+        </div>
+      </div>
+    </div>
+    <!-- backbox -->
+    <form [formGroup]="fgValidador" (ngSubmit)="identificarUsuario()">
+      <div class="frontbox">
+        <div class="login">
+          <h2>Iniciar Sesion</h2>
+          <div class="inputbox">
+            <input formControlName="usuario" type="email" id="correo" class="validate" placeholder="  EMAIL">
+            <input formControlName="contrasena" type="password" id="contrasena" class="validate" placeholder="  PASSWORD">
+          </div>
+          <p>FORGET PASSWORD?</p>
+          <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit" name="action">LOG IN</button>
+        </div>
+      </div>
+    </form>
+    <!-- frontbox -->
+  </div>
+</div>
